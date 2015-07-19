@@ -110,8 +110,3 @@ open the following in your compy:
 `http://localhost:9001/second.html` this will take you to the second page
 
 if you don't want to see the `:9001` you can change the lines with `9001` with the number `80`, which will remove the need for the color and port number (e.g. you will be able to open  `http://localhost/second.html`)
-
-### creating the html pages
-
-add the following to `second.html`
-
