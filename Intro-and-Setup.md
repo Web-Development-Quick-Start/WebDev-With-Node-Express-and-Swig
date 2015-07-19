@@ -23,7 +23,7 @@ Then cd into it and start installing all the things:
 
 copy the following text:
 
-```
+```javascript
 var app = require('express')();
 var swig = require('swig');
 
@@ -51,9 +51,9 @@ app.get('/second.html', function (req, res) {
 app.listen(9001);
 console.log('your application is running on port 9001');
 console.log('if running on your own compy, open with http://localhost:9001');
-
 ```
 
+### Make the app
 
 `vim app.js`
 
@@ -62,9 +62,10 @@ press `i` to go into typey-mode
 
 press `cntl-shift-v` to paste, and it should come to this (if not use the cursor to move around and make corrections as needed).
 
+### make some content
 
 
-### 
+#### Create an index.html file
 
 `mkdir views`
 `vim index.html`
@@ -77,5 +78,40 @@ hello world
 </html>
 ```
 
-
+#### then create another html to see how non-index.html files work
 `vim second.html`
+
+```html
+<html>
+<body>
+hello world again
+</body>
+</html>
+```
+
+### Run the app
+
+cd back into the `first-app` directory, then type in 
+
+`node app.js`, and :sparkles: magically your app is running :sparkles:
+
+### How to hack
+
+first two lines just get the tools in your program.
+
+There are some lines for toggling built-in and powerful caching 
+(faster content loading for previously visited pages)
+
+then you route your users to certain html files.
+
+open the following in your compy:
+
+`http://localhost:9001/` this will take yout to index page
+`http://localhost:9001/second.html` this will take you to the second page
+
+if you don't want to see the `:9001` you can change the lines with `9001` with the number `80`, which will remove the need for the color and port number (e.g. you will be able to open  `http://localhost/second.html`)
+
+### creating the html pages
+
+add the following to `second.html`
+
