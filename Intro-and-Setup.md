@@ -40,13 +40,12 @@ app.set('views', __dirname + '/views');
 app.set('view cache', false);
 swig.setDefaults({ cache: false });
 
-
 //routing here
 app.get('/', function (req, res) {
-        res.render('index', { /* template locals context */ });
+        res.render('index', { /* you can add dynamic stuff here */ });
 });
 app.get('/second.html', function (req, res) {
-        res.render('second.html', { /* template locals context */ });
+        res.render('second.html', { /* add dynamic stuff here */ });
 });
 
 app.listen(9001);
